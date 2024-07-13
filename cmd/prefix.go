@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"gopkg.in/fsnotify.v1"
 
@@ -80,7 +81,7 @@ var prefixCmd = &cobra.Command{
 				select {
 				case event := <-watcher.Events:
 					if event.Op&fsnotify.Create == fsnotify.Create {
-						// time.Sleep(1 * time.Second) // Ensure file is fully written
+						time.Sleep(1 * time.Second) // Ensure file is fully written
 						renameFile(event.Name)
 					}
 				case err := <-watcher.Errors:
