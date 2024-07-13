@@ -7,7 +7,7 @@ Initialized with the [Cobra CLI](https://github.com/spf13/cobra-cli/blob/main/RE
 ## Installation
 
 ```bash
-go install github.com/metruzanca/cli
+go install github.com/metruzanca/mc
 # or locally
 go install
 ```

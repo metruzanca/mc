@@ -5,7 +5,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/metruzanca/cli/cmd"
+	"github.com/metruzanca/mc/cmd"
 )
 
 func main() {

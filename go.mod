@@ -1,4 +1,4 @@
-module github.com/metruzanca/cli
+module github.com/metruzanca/mc
 
 go 1.22.4
 
