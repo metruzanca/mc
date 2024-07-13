@@ -15,5 +15,8 @@ go install
 ## Uninstall
 
 ```bash
+# Bash
+rm $(go env GOPATH)/bin/mc
+# Fish
 rm (go env GOPATH)/bin/mc
 ```
