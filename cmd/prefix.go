@@ -51,7 +51,7 @@ var prefixCmd = &cobra.Command{
 
 		if len(args) < 1 {
 			fmt.Println("Prefix command usage: [path] <prefix>")
-			os.Exit(1)
+			os.Exit(0)
 		}
 
 		var path string

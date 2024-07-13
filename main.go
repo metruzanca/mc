@@ -1,10 +1,11 @@
 package main
 
 import (
-	"cli/cmd"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/metruzanca/cli/cmd"
 )
 
 func main() {
