@@ -38,6 +38,16 @@ func renameFile(oldPath string) {
 	err := os.Rename(oldPath, newPath)
 	if err != nil {
 		log.Printf("Failed to rename file %s: %s\n", oldPath, err)
+
+		// Retry once after a delay of 250ms
+		time.Sleep(250 * time.Millisecond)
+		err = os.Rename(oldPath, newPath)
+		if err != nil {
+			log.Printf("Retry failed to rename file %s: %s\n", oldPath, err)
+		} else {
+			log.Printf("Retry succeeded in renaming %s to %s\n", oldPath, newPath)
+			counter++
+		}
 	} else {
 		log.Printf("Renamed %s to %s\n", oldPath, newPath)
 		counter++
